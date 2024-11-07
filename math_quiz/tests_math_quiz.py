@@ -13,13 +13,15 @@ class TestMathGame(unittest.TestCase):
             self.assertTrue(min_val <= rand_num <= max_val)
 
     def test_get_operator(self):
+        #test if operators are choiced in the list
         #TODO
         operators = ['+','-','*']
-        for _ in range(1000):
+        for _ in range(1000):# test a large number of operators
             rand_operator = get_operator()
             self.assertIn(rand_operator,operators)
 
     def test_get_problemandanswer(self):
+        #test if the problems and answers are equal to the expected problems and answers
             test_cases = [
                 (5,2,'+','5 + 2',7),
                 (6,2,'-','6 - 2',4),
